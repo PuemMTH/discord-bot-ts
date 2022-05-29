@@ -12,7 +12,7 @@ class bot extends Client {
 
     // array of owner's Discord IDs
     // Make sure to at least remove my ID from the array ( it is just a placeholder ) 
-    owners: string[] = ["441943765855240192"];
+    owners: string[] = ["883280252091125800"];
 
     constructor(options: ClientOptions) {
         super(options);
@@ -31,11 +31,12 @@ class bot extends Client {
 
         categories.forEach(async cat => {
             // Reading the  directories which are inside command directory
+            console.log(`Loading commands from ${cat}`);
             const commands = (await promises.readdir(join(__dirname, `../commands/${cat}`))).filter(file => file.endsWith(this.extension));
 
             for (let i = 0; i < commands.length; i++) {
                 const file = commands[i];
-
+                console.log(`Loading command ${file}`);
                 // Getting the command
                 const command: Command = require(`../commands/${cat}/${file}`)?.default || {};
 

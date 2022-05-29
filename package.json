@@ -17,6 +17,7 @@
     "mongoose": "^6.0.7"
   },
   "devDependencies": {
-    "@types/node": "^16.10.1"
+    "@types/node": "^16.10.1",
+    "ts-node": "^10.8.0"
   }
 }

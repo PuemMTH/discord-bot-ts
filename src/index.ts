@@ -7,7 +7,14 @@ import 'dotenv/config';
 // Declaring the discord client
 const client = new bot({
     // Adding the intents.
-    intents: ["GUILDS"]
+    intents: [
+        "GUILDS",
+        "GUILD_MEMBERS",
+        "GUILD_VOICE_STATES",
+        "GUILD_MESSAGES",
+        "GUILD_MESSAGE_REACTIONS",
+        "DIRECT_MESSAGES",
+    ]
 });
 
 // Logging in the client
