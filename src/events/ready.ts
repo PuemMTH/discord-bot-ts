@@ -5,6 +5,7 @@ import bot from "../classes/bot";
 export default async function ready(client: bot) {
     const slashCommands = [], 
     commands = client.commands.toJSON();
+    // console.log(commands);
 
     // Getting the slash command data
     for (let i = 0; i < commands.length; i++) {
@@ -17,6 +18,7 @@ export default async function ready(client: bot) {
     }
 
     // Adding the slash commands globally
+    console.log(`${slashCommands.length} slash commands added`);
     if (slashCommands.length > 0) {
         await client.application?.commands.set(slashCommands)
     }

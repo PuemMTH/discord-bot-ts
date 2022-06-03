@@ -4,6 +4,7 @@ import { promises, readdirSync } from 'fs';
 import { join } from 'path';
 
 class bot extends Client {
+    [x: string]: any;
     // Defining the custom properties
     commands: Collection<string, Command> = new Collection();
     categoires: Array<string> = readdirSync(join(__dirname, '../commands'));
@@ -31,7 +32,7 @@ class bot extends Client {
 
         categories.forEach(async cat => {
             // Reading the  directories which are inside command directory
-            console.log(`Loading commands from ${cat}`);
+            // console.log(`Loading commands from ${cat}`);
             const commands = (await promises.readdir(join(__dirname, `../commands/${cat}`))).filter(file => file.endsWith(this.extension));
 
             for (let i = 0; i < commands.length; i++) {
@@ -59,7 +60,7 @@ class bot extends Client {
 
             if (!event || typeof (event) !== "function") return; // Not a valid event file
 
-            this.on(events[i].split(".")[0], (...args) => event(this, ...args))
+            this.on(events[i].split(".")[0], (...args: any) => event(this, ...args))
         }
     }
 }

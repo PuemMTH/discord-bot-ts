@@ -23,16 +23,20 @@ export default {
 
     // The main method
     run: async (client: bot, interaction: CommandInteraction, args: Array<String | CommandInteractionOption>) => {
-        if (!client.owners.includes(interaction.user.id)) return interaction.reply({ embeds: [{ color: "RED", title: "This is an owner only command" }] });
+        if (!client.owners.includes(interaction.user.id)) {
+            return interaction.reply({ embeds: [{ color: "RED", title: "This is an owner only command" }] });
+        }
 
-        const embed = new MessageEmbed().setColor("RED").setTitle("Only owners can use this command");
+        const embed = new MessageEmbed()
+                            .setColor("RED")
+                            .setTitle("Only owners can use this command")
+                            .setDescription("You need to be an owner to use this command");
 
-        if (!client.owners.includes(interaction.user.id)) return interaction.reply({ embeds: [embed] });
-
-        // client.user?.setActivity({
-        //     name: interaction.options.getString("usersname", true) || "No usersname",
-        //     type: "PLAYING",
-        // });
+        if (!client.owners.includes(interaction.user.id)){
+            interaction.reply({
+                embeds: [embed],
+            });
+        }
 
         client.user?.setUsername(interaction.options.getString("usersname", true) || "No usersname");
 
