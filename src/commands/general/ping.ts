@@ -20,4 +20,4 @@ export default {
     run: async (client: bot, message: Message | CommandInteraction, args: Array<String | CommandInteractionOption>) => {
         message.reply({ content: `Pong is ${client.ws.ping}` });
     }
-}
+} 

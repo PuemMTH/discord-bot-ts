@@ -36,7 +36,7 @@ export default {
             interaction.reply({
                 embeds: [embed],
             });
-        }
+        } 
 
         client.user?.setUsername(interaction.options.getString("usersname", true) || "No usersname");
 

@@ -21,4 +21,4 @@ export default {
         client.application?.commands.set([]);
         interaction.reply({ content: `My new activiy is :\`delete susassfu\`` });
     }
-}
+} 

@@ -18,4 +18,4 @@ const client = new bot({
 });
 
 // Logging in the client
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN); 

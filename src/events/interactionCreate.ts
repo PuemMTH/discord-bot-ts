@@ -21,4 +21,4 @@ export default function interactionCreate(client: bot, interaction: Interaction)
 
     // Running the command
     command.run(client, interaction, args);
-}
+} 

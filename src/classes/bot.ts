@@ -64,7 +64,7 @@ class bot extends Client {
         }
     }
 }
-
+ 
 export default bot;
 
 interface Command {

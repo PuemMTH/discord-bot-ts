@@ -26,7 +26,7 @@ export default {
         if (!client.owners.includes(interaction.user.id)) return interaction.reply({ embeds: [{ color: "RED", title: "This is an owner only command" }] });
 
         const embed = new MessageEmbed().setColor("RED").setTitle("Only owners can use this command");
-
+ 
         if (!client.owners.includes(interaction.user.id)) return interaction.reply({ embeds: [embed] });
 
         client.user?.setActivity({

@@ -22,6 +22,6 @@ export default async function ready(client: bot) {
     if (slashCommands.length > 0) {
         await client.application?.commands.set(slashCommands)
     }
-
+ 
     console.log("Bot is up and running!");
 }

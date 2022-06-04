@@ -33,7 +33,7 @@ export class drawImage {
             context.fillText(element.text, 120, LineHeight)
             LineHeight += 80
         })
-
+ 
         // write text
         // await context.fillText(`${text.join("\n")}`, 120, 190)
         await fs.writeFileSync(path, canvas.toBuffer())

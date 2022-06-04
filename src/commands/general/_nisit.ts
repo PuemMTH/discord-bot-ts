@@ -34,7 +34,7 @@ export default {
                 {
                     text: `คณะ: \t\t${res.data[2].text}`,
                     color: '#000',
-                },
+                }, 
                 {
                     text: `สาขา: \t${res.data[3].text}`,
                     color: '#000',
