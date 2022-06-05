@@ -56,8 +56,6 @@ export default {
                         .setLabel('Detail')
                         .setURL(`http://nisit-ku.ku.ac.th/WebForm_Index_Report.aspx?stdid=${kuid}&h=0`)
                         .setStyle('LINK'),
-                        // .setCustomId('primary')
-                        // .setDisabled(true),
                 );
             await message.reply(
                 {
